@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.ncd
+OUTFILE=C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.bit
+FAMILY=Spartan6
+PART=xc6slx25-3ftg256
+WORKINGDIR=C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300
+LICENSE=WebPack
+USER_INFO=210981254_0_0_774

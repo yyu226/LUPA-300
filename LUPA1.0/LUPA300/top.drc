@@ -1,0 +1,60 @@
+Release 13.3 Drc O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Mon Aug 22 12:13:45 2016
+
+drc -z top.ncd top.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   LUPA300/REG_CONFIG/_n0103<7> is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   LUPA300/REG_CONFIG/_n0103<4> is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   LUPA300/REG_CONFIG/_n0103<3> is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   LUPA300/REG_CONFIG/_n0103<6> is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   LUPA300/REG_CONFIG/_n0103<5> is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TMDS_POSITIVE<0>_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TMDS_POSITIVE<1>_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TMDS_POSITIVE<2>_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TMDS_CLOCK_P_PULLUP is set but the tri state is not configured. 
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp ISCM/dcm_sp_inst, consult
+   the device Data Sheet.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TMDS_POSITIVE<0>. The HDMI_PORT2/mBLUE/OBUFDS buffer is programmed as a true
+   differential. Adding a pullup, pulldown, or keeper to a differential IO can
+   create signal integrity problems and can violate specifications.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TMDS_POSITIVE<1>. The HDMI_PORT2/mGREEN/OBUFDS buffer is programmed as a true
+   differential. Adding a pullup, pulldown, or keeper to a differential IO can
+   create signal integrity problems and can violate specifications.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TMDS_POSITIVE<2>. The HDMI_PORT2/mRED/OBUFDS buffer is programmed as a true
+   differential. Adding a pullup, pulldown, or keeper to a differential IO can
+   create signal integrity problems and can violate specifications.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TMDS_CLOCK_P. The HDMI_PORT2/mCLOCK/OBUFDS buffer is programmed as a true
+   differential. Adding a pullup, pulldown, or keeper to a differential IO can
+   create signal integrity problems and can violate specifications.
+DRC detected 0 errors and 14 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

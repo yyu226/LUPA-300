@@ -1,0 +1,182 @@
+--------------------------------------------------------------------------------
+Release 13.3 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\13.3\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc6slx25,ftg256,C,-3 (PRODUCTION 1.20 2011-10-03)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLOCK_IN
+-------------+------------+------------+------------+------------+------------------+--------+
+             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source       | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------+------------+------------------+--------+
+DATA_IMAGE<2>|    3.091(R)|      SLOW  |   -1.274(R)|      FAST  |clk_80Mb_BUFG     |   0.000|
+DATA_IMAGE<3>|    2.719(R)|      SLOW  |   -1.047(R)|      FAST  |clk_80Mb_BUFG     |   0.000|
+DATA_IMAGE<4>|    3.319(R)|      SLOW  |   -1.405(R)|      FAST  |clk_80Mb_BUFG     |   0.000|
+DATA_IMAGE<5>|    2.780(R)|      SLOW  |   -1.093(R)|      FAST  |clk_80Mb_BUFG     |   0.000|
+DATA_IMAGE<6>|    3.079(R)|      SLOW  |   -1.272(R)|      FAST  |clk_80Mb_BUFG     |   0.000|
+DATA_IMAGE<7>|    1.794(R)|      SLOW  |   -0.495(R)|      FAST  |clk_80Mb_BUFG     |   0.000|
+DATA_IMAGE<8>|    1.961(R)|      SLOW  |   -0.602(R)|      FAST  |clk_80Mb_BUFG     |   0.000|
+DATA_IMAGE<9>|    2.184(R)|      SLOW  |   -0.720(R)|      FAST  |clk_80Mb_BUFG     |   0.000|
+DQ<0>        |    3.301(R)|      SLOW  |   -1.606(R)|      FAST  |clk_100M          |   0.000|
+DQ<1>        |    3.482(R)|      SLOW  |   -1.718(R)|      FAST  |clk_100M          |   0.000|
+DQ<2>        |    3.471(R)|      SLOW  |   -1.702(R)|      FAST  |clk_100M          |   0.000|
+DQ<3>        |    3.136(R)|      SLOW  |   -1.452(R)|      FAST  |clk_100M          |   0.000|
+DQ<4>        |    3.226(R)|      SLOW  |   -1.553(R)|      FAST  |clk_100M          |   0.000|
+DQ<5>        |    3.161(R)|      SLOW  |   -1.455(R)|      FAST  |clk_100M          |   0.000|
+DQ<6>        |    3.093(R)|      SLOW  |   -1.436(R)|      FAST  |clk_100M          |   0.000|
+DQ<7>        |    2.804(R)|      SLOW  |   -1.284(R)|      FAST  |clk_100M          |   0.000|
+DQ<8>        |    3.456(R)|      SLOW  |   -1.738(R)|      FAST  |clk_100M          |   0.000|
+DQ<9>        |    3.700(R)|      SLOW  |   -1.890(R)|      FAST  |clk_100M          |   0.000|
+DQ<10>       |    3.445(R)|      SLOW  |   -1.731(R)|      FAST  |clk_100M          |   0.000|
+DQ<11>       |    4.572(R)|      SLOW  |   -2.411(R)|      FAST  |clk_100M          |   0.000|
+DQ<12>       |    4.284(R)|      SLOW  |   -2.218(R)|      FAST  |clk_100M          |   0.000|
+DQ<13>       |    4.493(R)|      SLOW  |   -2.338(R)|      FAST  |clk_100M          |   0.000|
+DQ<14>       |    3.465(R)|      SLOW  |   -1.706(R)|      FAST  |clk_100M          |   0.000|
+DQ<15>       |    3.310(R)|      SLOW  |   -1.632(R)|      FAST  |clk_100M          |   0.000|
+-------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLOCK_IN to Pad
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+                |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination     |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+BA<0>           |         5.617(R)|      SLOW  |         3.675(R)|      FAST  |clk_100M          |   0.000|
+CAS_N           |         8.434(R)|      SLOW  |         5.527(R)|      FAST  |clk_100M          |   0.000|
+CKE             |         6.724(R)|      SLOW  |         4.385(R)|      FAST  |clk_100M          |   0.000|
+CS_N            |         7.943(R)|      SLOW  |         5.230(R)|      FAST  |clk_100M          |   0.000|
+DQ<0>           |         8.770(R)|      SLOW  |         4.336(R)|      FAST  |clk_100M          |   0.000|
+DQ<1>           |         9.192(R)|      SLOW  |         4.527(R)|      FAST  |clk_100M          |   0.000|
+DQ<2>           |         9.329(R)|      SLOW  |         4.504(R)|      FAST  |clk_100M          |   0.000|
+DQ<3>           |        10.165(R)|      SLOW  |         5.872(R)|      FAST  |clk_100M          |   0.000|
+DQ<4>           |        10.600(R)|      SLOW  |         5.735(R)|      FAST  |clk_100M          |   0.000|
+DQ<5>           |        11.366(R)|      SLOW  |         6.175(R)|      FAST  |clk_100M          |   0.000|
+DQ<6>           |        10.975(R)|      SLOW  |         6.113(R)|      FAST  |clk_100M          |   0.000|
+DQ<7>           |        11.325(R)|      SLOW  |         6.749(R)|      FAST  |clk_100M          |   0.000|
+DQ<8>           |         7.446(R)|      SLOW  |         4.736(R)|      FAST  |clk_100M          |   0.000|
+DQ<9>           |         7.779(R)|      SLOW  |         4.758(R)|      FAST  |clk_100M          |   0.000|
+DQ<10>          |         7.779(R)|      SLOW  |         4.746(R)|      FAST  |clk_100M          |   0.000|
+DQ<11>          |         8.989(R)|      SLOW  |         5.347(R)|      FAST  |clk_100M          |   0.000|
+DQ<12>          |         9.182(R)|      SLOW  |         5.265(R)|      FAST  |clk_100M          |   0.000|
+DQ<13>          |         9.182(R)|      SLOW  |         5.405(R)|      FAST  |clk_100M          |   0.000|
+DQ<14>          |         7.954(R)|      SLOW  |         4.814(R)|      FAST  |clk_100M          |   0.000|
+DQ<15>          |         7.954(R)|      SLOW  |         4.961(R)|      FAST  |clk_100M          |   0.000|
+DRAM_CLK        |         4.702(R)|      SLOW  |         3.011(R)|      FAST  |clk_100ld         |   0.000|
+                |         4.682(F)|      SLOW  |         3.017(F)|      FAST  |clk_100ld         |   0.000|
+LDQM            |         8.045(R)|      SLOW  |         5.305(R)|      FAST  |clk_100M          |   0.000|
+LED_indicate<3> |         7.465(R)|      SLOW  |         4.794(R)|      FAST  |clk_80M           |   0.000|
+LED_indicate<4> |        10.316(R)|      SLOW  |         6.640(R)|      FAST  |clk_100M          |   0.000|
+LED_indicate<5> |         9.993(R)|      SLOW  |         6.424(R)|      FAST  |clk_100M          |   0.000|
+LED_indicate<6> |        10.181(R)|      SLOW  |         6.574(R)|      FAST  |clk_100M          |   0.000|
+LED_indicate<7> |        10.413(R)|      SLOW  |         6.739(R)|      FAST  |clk_100M          |   0.000|
+LUPA_CLK        |         4.511(R)|      SLOW  |         2.831(R)|      FAST  |clk_80M           |   0.000|
+                |         4.491(F)|      SLOW  |         2.837(F)|      FAST  |clk_80M           |   0.000|
+LUPA_RST        |         9.475(R)|      SLOW  |         6.012(R)|      FAST  |clk_80M           |   0.000|
+RAS_N           |         7.792(R)|      SLOW  |         5.127(R)|      FAST  |clk_100M          |   0.000|
+SA<0>           |         6.335(R)|      SLOW  |         4.135(R)|      FAST  |clk_100M          |   0.000|
+SA<1>           |         5.997(R)|      SLOW  |         3.959(R)|      FAST  |clk_100M          |   0.000|
+SA<2>           |         5.859(R)|      SLOW  |         3.858(R)|      FAST  |clk_100M          |   0.000|
+SA<3>           |         5.857(R)|      SLOW  |         3.867(R)|      FAST  |clk_100M          |   0.000|
+SA<4>           |         5.956(R)|      SLOW  |         3.927(R)|      FAST  |clk_100M          |   0.000|
+SA<5>           |         5.770(R)|      SLOW  |         3.815(R)|      FAST  |clk_100M          |   0.000|
+SA<6>           |         5.755(R)|      SLOW  |         3.792(R)|      FAST  |clk_100M          |   0.000|
+SA<7>           |         5.565(R)|      SLOW  |         3.686(R)|      FAST  |clk_100M          |   0.000|
+SA<8>           |         6.259(R)|      SLOW  |         4.137(R)|      FAST  |clk_100M          |   0.000|
+SA<9>           |         6.222(R)|      SLOW  |         4.086(R)|      FAST  |clk_100M          |   0.000|
+SA<10>          |         5.895(R)|      SLOW  |         3.879(R)|      FAST  |clk_100M          |   0.000|
+SA<11>          |         6.255(R)|      SLOW  |         4.109(R)|      FAST  |clk_100M          |   0.000|
+SA<12>          |         7.246(R)|      SLOW  |         4.705(R)|      FAST  |clk_100M          |   0.000|
+TMDS_CLOCK_N    |         6.078(R)|      SLOW  |         3.670(R)|      FAST  |clk_50M           |   0.000|
+TMDS_CLOCK_P    |         6.036(R)|      SLOW  |         3.654(R)|      FAST  |clk_50M           |   0.000|
+TMDS_NEGTIVE<0> |         7.472(R)|      SLOW  |         4.555(R)|      FAST  |clk_250M          |   0.000|
+TMDS_NEGTIVE<1> |         7.722(R)|      SLOW  |         4.674(R)|      FAST  |clk_250M          |   0.000|
+TMDS_NEGTIVE<2> |         7.090(R)|      SLOW  |         4.300(R)|      FAST  |clk_250M          |   0.000|
+TMDS_POSITIVE<0>|         7.430(R)|      SLOW  |         4.539(R)|      FAST  |clk_250M          |   0.000|
+TMDS_POSITIVE<1>|         7.680(R)|      SLOW  |         4.658(R)|      FAST  |clk_250M          |   0.000|
+TMDS_POSITIVE<2>|         7.048(R)|      SLOW  |         4.284(R)|      FAST  |clk_250M          |   0.000|
+UDQM            |         6.937(R)|      SLOW  |         4.514(R)|      FAST  |clk_100M          |   0.000|
+WE_N            |         7.923(R)|      SLOW  |         5.195(R)|      FAST  |clk_100M          |   0.000|
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock FRAME_VALID to Pad
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED_indicate<2>|        12.533(F)|      SLOW  |         7.310(F)|      FAST  |FRAME_VALID_IBUF  |   0.000|
+LUPA_RST       |        14.088(F)|      SLOW  |         8.521(F)|      FAST  |FRAME_VALID_IBUF  |   0.000|
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock LINE_VALID to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+INT_TIME1   |         9.605(F)|      SLOW  |         5.783(F)|      FAST  |LINE_VALID_IBUF   |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLOCK_IN
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK_IN       |    6.212|    2.940|    1.309|         |
+FRAME_VALID    |   11.110|   10.590|         |         |
+LINE_VALID     |    8.147|    8.147|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock FRAME_VALID
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK_IN       |         |         |    0.855|         |
+FRAME_VALID    |    1.614|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock LINE_VALID
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK_IN       |         |         |    3.089|         |
+LINE_VALID     |         |         |         |    1.528|
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Aug 22 12:13:36 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 247 MB
+
+
+

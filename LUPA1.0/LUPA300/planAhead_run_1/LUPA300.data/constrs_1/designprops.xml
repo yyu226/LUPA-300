@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Compat Version="1" Minor="4">
+	<CompatParts>
+	</CompatParts>
+	<ConfigModes>
+		<Mode Id="JTAG"/>
+	</ConfigModes>
+	<PortProps>
+		<Port Name="DATA_IMAGE[9]" OffChipTerm="NONE"/>
+		<Port Name="DATA_IMAGE[8]" OffChipTerm="NONE"/>
+		<Port Name="DATA_IMAGE[7]" OffChipTerm="NONE"/>
+		<Port Name="DATA_IMAGE[6]" OffChipTerm="NONE"/>
+		<Port Name="DATA_IMAGE[5]" OffChipTerm="NONE"/>
+		<Port Name="DATA_IMAGE[4]" OffChipTerm="NONE"/>
+		<Port Name="DATA_IMAGE[3]" OffChipTerm="NONE"/>
+		<Port Name="DATA_IMAGE[2]" OffChipTerm="NONE"/>
+		<Port Name="DATA_IMAGE[1]" OffChipTerm="NONE"/>
+		<Port Name="DATA_IMAGE[0]" OffChipTerm="NONE"/>
+		<Port Name="SA[12]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[11]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[10]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[9]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[8]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[7]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[6]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[5]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[4]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[3]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[2]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[1]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SA[0]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="BA[1]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="BA[0]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[15]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[14]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[13]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[12]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[11]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[10]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[9]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[8]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[7]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[6]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[5]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[4]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[3]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[2]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[1]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DQ[0]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="TMDS_POSITIVE[2]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDS_POSITIVE[1]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDS_POSITIVE[0]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDS_NEGTIVE[2]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDS_NEGTIVE[1]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDS_NEGTIVE[0]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="LED_indicate[7]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED_indicate[6]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED_indicate[5]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED_indicate[4]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED_indicate[3]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED_indicate[2]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED_indicate[1]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED_indicate[0]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="CLOCK_IN" OffChipTerm="NONE"/>
+		<Port Name="LINE_VALID" OffChipTerm="NONE"/>
+		<Port Name="FRAME_VALID" OffChipTerm="NONE"/>
+		<Port Name="SPI_EN" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SPI_CLK" OffChipTerm="FP_VTT_50"/>
+		<Port Name="SPI_DAT" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LUPA_CLK" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LUPA_RST" OffChipTerm="FP_VTT_50"/>
+		<Port Name="INT_TIME1" OffChipTerm="FP_VTT_50"/>
+		<Port Name="INT_TIME2" OffChipTerm="FP_VTT_50"/>
+		<Port Name="INT_TIME3" OffChipTerm="FP_VTT_50"/>
+		<Port Name="DRAM_CLK" OffChipTerm="FP_VTT_50"/>
+		<Port Name="CS_N" OffChipTerm="FP_VTT_50"/>
+		<Port Name="CKE" OffChipTerm="FP_VTT_50"/>
+		<Port Name="RAS_N" OffChipTerm="FP_VTT_50"/>
+		<Port Name="CAS_N" OffChipTerm="FP_VTT_50"/>
+		<Port Name="WE_N" OffChipTerm="FP_VTT_50"/>
+		<Port Name="UDQM" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LDQM" OffChipTerm="FP_VTT_50"/>
+		<Port Name="TMDS_CLOCK_P" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDS_CLOCK_N" OffChipTerm="FP_3.3_50"/>
+	</PortProps>
+</Compat>
+

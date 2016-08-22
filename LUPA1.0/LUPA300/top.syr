@@ -1,0 +1,1796 @@
+Release 13.3 - xst O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx25-3-ftg256
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\pll.v" into library work
+Parsing module <pll>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\pll\example_design\pll_exdes.v" into library work
+Parsing module <pll_exdes>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\TDMS_encoder.v" into library work
+Parsing module <TMDS_encoder>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\spi_upload.v" into library work
+Parsing module <spi_upload>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\subpll.v" into library work
+Parsing module <subpll>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\fifo_vga.v" into library work
+Parsing module <fifo_vga>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\data_path.v" into library work
+Parsing module <sdr_data_path>.
+Parsing verilog file "Sdram_Params.h" included at line 30.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\controller.v" into library work
+Parsing module <control_interface>.
+Parsing verilog file "Sdram_Params.h" included at line 41.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\command.v" into library work
+Parsing module <command>.
+Parsing verilog file "Sdram_Params.h" included at line 47.
+WARNING:HDLCompiler:98 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\command.v" Line 78: CS_N was previously declared with a range
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" into library work
+Parsing module <sdram_top>.
+Parsing verilog file "Sdram_Params.h" included at line 69.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" into library work
+Parsing module <ISensor_Read>.
+WARNING:HDLCompiler:370 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 43: Empty port in module declaration
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\cmm.v" into library work
+Parsing module <cmm>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\hdmi_top.v" into library work
+Parsing module <hdmi_top>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" into library work
+Parsing module <top>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\cmm\example_design\cmm_exdes.v" into library work
+Parsing module <cmm_exdes>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\subpll\example_design\subpll_exdes.v" into library work
+Parsing module <subpll_exdes>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <pll>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=20,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=10,CLKOUT0_PHASE=-148.5,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=10,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=4,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DIVIDE=20,CLKOUT3_PHASE=0.0,CLKOUT3_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\pll.v" Line 129: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\pll.v" Line 130: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\pll.v" Line 131: Assignment to locked_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <cmm>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=5,CLKFX_MULTIPLY=8,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\cmm.v" Line 127: Assignment to locked_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\cmm.v" Line 128: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <ODDR2>.
+
+Elaborating module <ISensor_Read>.
+
+Elaborating module <subpll>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="INTERNAL",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=6,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=15,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKIN_PERIOD=12.5,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\subpll.v" Line 111: Assignment to clkout1_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\subpll.v" Line 112: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\subpll.v" Line 113: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\subpll.v" Line 114: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\subpll.v" Line 115: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\subpll.v" Line 116: Assignment to locked_unused ignored, since the identifier is never used
+
+Elaborating module <spi_upload>.
+WARNING:HDLCompiler:872 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\spi_upload.v" Line 48: Using initial value of addr since it is never assigned
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\spi_upload.v" Line 156: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\spi_upload.v" Line 207: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 128: Size mismatch in connection of port <nrg>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 142: Result of 21-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 147: Assignment to oSTART ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 170: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 173: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 178: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 183: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 167: Assignment to rSTART ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 195: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 198: Assignment to mFVAL ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 218: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 233: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 242: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 261: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 294: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ISensor_Read.v" Line 298: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 206: Result of 32-bit expression is truncated to fit in 31-bit target.
+
+Elaborating module <hdmi_top>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\hdmi_top.v" Line 90: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\hdmi_top.v" Line 100: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <TMDS_encoder>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\hdmi_top.v" Line 140: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <OBUFDS>.
+
+Elaborating module <sdram_top>.
+
+Elaborating module <control_interface>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\controller.v" Line 170: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 240: Size mismatch in connection of port <CMD>. Formal port size is 3-bit while actual signal size is 2-bit.
+
+Elaborating module <command>.
+
+Elaborating module <sdr_data_path>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 286: Assignment to IDQM ignored, since the identifier is never used
+
+Elaborating module <fifo_vga>.
+WARNING:HDLCompiler:1499 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\ipcore_dir\fifo_vga.v" Line 39: Empty module <fifo_vga> remains a black box.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 298: Assignment to EPT1 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 300: Size mismatch in connection of port <wr_data_count>. Formal port size is 8-bit while actual signal size is 7-bit.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 309: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 322: Assignment to wFULL ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 323: Assignment to EPT0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 325: Assignment to write_side_fifo_wusedw1 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 474: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:462 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 519: if-condition does not match any sensitivity list edge
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 521: Signal <WR_ADDR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 522: Signal <RD1_ADDR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 523: Signal <RD2_ADDR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 525: Signal <WR_MAX_ADDR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 526: Signal <WR_LENGTH> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 528: Signal <RD1_MAX_ADDR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 529: Signal <RD2_MAX_ADDR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 531: Signal <RD1_LENGTH> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 532: Signal <RD2_LENGTH> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 536: Signal <RD1_ADDR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 537: Signal <RD2_ADDR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 539: Signal <RD1_MAX_ADDR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 540: Signal <RD2_MAX_ADDR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 542: Signal <RD1_LENGTH> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 543: Signal <RD2_LENGTH> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\sdram_top.v" Line 518: Assignment to rRD2_MAX_ADDR ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 236: Size mismatch in connection of port <WR_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 237: Size mismatch in connection of port <WR_MAX_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 246: Size mismatch in connection of port <RD1_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 247: Size mismatch in connection of port <RD1_MAX_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 251: Size mismatch in connection of port <RD2_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 252: Size mismatch in connection of port <RD2_MAX_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 273: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 276: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 276: Assignment to sel_indicator ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\LUPA_ISE\LUPA1.0\LUPA300\top.v" Line 282: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/top.v".
+WARNING:Xst:2898 - Port 'p1', unconnected in block instance 'LUPA300', is tied to GND.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/top.v" line 180: Output port <oCLOCK_80> of the instance <LUPA300> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/top.v" line 180: Output port <INT_TIME2> of the instance <LUPA300> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/top.v" line 180: Output port <INT_TIME3> of the instance <LUPA300> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/top.v" line 213: Output port <LED> of the instance <HDMI_PORT2> is unconnected or connected to loadless signal.
+    Found 16-bit register for signal <Count>.
+    Found 1-bit register for signal <Global_Reset>.
+    Found 1-bit register for signal <FIFO_Reset>.
+    Found 32-bit register for signal <Reset_Count>.
+    Found 1-bit register for signal <clk_25m>.
+    Found 16-bit adder for signal <Count[15]_GND_1_o_add_13_OUT> created at line 282.
+    Found 32-bit adder for signal <Reset_Count[31]_GND_1_o_add_18_OUT> created at line 299.
+    Found 1-bit tristate buffer for signal <INT_TIME2> created at line 210
+    Found 1-bit tristate buffer for signal <INT_TIME3> created at line 211
+    Found 16-bit comparator greater for signal <Count[15]_PWR_1_o_LessThan_13_o> created at line 280
+    Found 32-bit comparator greater for signal <n0021> created at line 300
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  51 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Tristate(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <pll>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/ipcore_dir/pll.v".
+    Summary:
+	no macro.
+Unit <pll> synthesized.
+
+Synthesizing Unit <cmm>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/ipcore_dir/cmm.v".
+    Summary:
+	no macro.
+Unit <cmm> synthesized.
+
+Synthesizing Unit <ISensor_Read>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/isensor_read.v".
+WARNING:Xst:647 - Input <iADATA<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <rst_cntr>.
+    Found 1-bit register for signal <rst_n>.
+    Found 1-bit register for signal <rgSTART>.
+    Found 8-bit register for signal <frame_count>.
+    Found 21-bit register for signal <exp_ctr>.
+    Found 1-bit register for signal <Cstart>.
+    Found 11-bit register for signal <fot_ctr>.
+    Found 1-bit register for signal <INT_TIME1>.
+    Found 16-bit adder for signal <rst_cntr[15]_GND_9_o_add_13_OUT> created at line 183.
+    Found 8-bit adder for signal <frame_count[7]_GND_9_o_add_28_OUT> created at line 218.
+    Found 21-bit adder for signal <exp_ctr[20]_GND_9_o_add_44_OUT> created at line 261.
+    Found 11-bit adder for signal <fot_ctr[10]_GND_9_o_add_52_OUT> created at line 294.
+    Found 16-bit comparator lessequal for signal <rst_cntr[15]_GND_9_o_LessThan_7_o> created at line 169
+    Found 16-bit comparator greater for signal <rst_cntr[15]_GND_9_o_LessThan_9_o> created at line 171
+    Found 16-bit comparator lessequal for signal <rst_cntr[15]_GND_9_o_LessThan_11_o> created at line 176
+    Found 16-bit comparator lessequal for signal <rst_cntr[15]_GND_9_o_LessThan_13_o> created at line 182
+    Found 16-bit comparator greater for signal <GND_9_o_rst_cntr[15]_LessThan_21_o> created at line 190
+    Found 21-bit comparator greater for signal <exp_ctr[20]_GND_9_o_LessThan_44_o> created at line 260
+    Found 21-bit comparator lessequal for signal <n0042> created at line 286
+    Found 21-bit comparator greater for signal <exp_ctr[20]_GND_9_o_LessThan_51_o> created at line 286
+    Found 11-bit comparator greater for signal <GND_9_o_fot_ctr[10]_LessThan_56_o> created at line 298
+    Found 21-bit comparator greater for signal <exp_ctr[20]_GND_9_o_LessThan_60_o> created at line 310
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  60 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <ISensor_Read> synthesized.
+
+Synthesizing Unit <subpll>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/ipcore_dir/subpll.v".
+    Summary:
+	no macro.
+Unit <subpll> synthesized.
+
+Synthesizing Unit <spi_upload>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/spi_upload.v".
+WARNING:Xst:647 - Input <nrg<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 6-bit register for signal <next>.
+    Found 6-bit register for signal <state>.
+    Found 6-bit adder for signal <next[5]_GND_12_o_add_18_OUT> created at line 207.
+    Found 64x8-bit Read Only RAM for signal <_n0103>
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_en>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_clk>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cfg_DONE<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cfg_DONE<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_dat>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   5 Latch(s).
+Unit <spi_upload> synthesized.
+
+Synthesizing Unit <hdmi_top>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/hdmi_top.v".
+    Found 10-bit register for signal <contX>.
+    Found 10-bit register for signal <contY>.
+    Found 1-bit register for signal <syncH>.
+    Found 1-bit register for signal <syncV>.
+    Found 1-bit register for signal <actvA>.
+    Found 1-bit register for signal <actvAa>.
+    Found 10-bit register for signal <TMDS_shift_red>.
+    Found 10-bit register for signal <TMDS_shift_green>.
+    Found 10-bit register for signal <TMDS_shift_blue>.
+    Found 4-bit register for signal <TMDS_modulo>.
+    Found 1-bit register for signal <shift_LOAD>.
+    Found 32-bit register for signal <cntr>.
+    Found 32-bit adder for signal <cntr[31]_GND_24_o_add_1_OUT> created at line 81.
+    Found 10-bit adder for signal <contX[9]_GND_24_o_add_6_OUT> created at line 90.
+    Found 10-bit adder for signal <contY[9]_GND_24_o_add_12_OUT> created at line 100.
+    Found 5-bit adder for signal <n0091[4:0]> created at line 140.
+    Found 10-bit comparator lessequal for signal <n0012> created at line 107
+    Found 10-bit comparator greater for signal <contX[9]_PWR_22_o_LessThan_19_o> created at line 107
+    Found 10-bit comparator lessequal for signal <n0017> created at line 109
+    Found 10-bit comparator greater for signal <contY[9]_GND_24_o_LessThan_22_o> created at line 109
+    Found 10-bit comparator greater for signal <contX[9]_PWR_22_o_LessThan_24_o> created at line 111
+    Found 10-bit comparator greater for signal <contY[9]_GND_24_o_LessThan_25_o> created at line 111
+    Found 10-bit comparator greater for signal <PWR_22_o_contX[9]_LessThan_27_o> created at line 115
+    Found 10-bit comparator greater for signal <contX[9]_PWR_22_o_LessThan_29_o> created at line 115
+    Found 10-bit comparator greater for signal <contY[9]_GND_24_o_LessThan_32_o> created at line 115
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  91 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <hdmi_top> synthesized.
+
+Synthesizing Unit <TMDS_encoder>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/tdms_encoder.v".
+    Found 4-bit register for signal <balance_acc>.
+    Found 10-bit register for signal <TMDS>.
+    Found 4-bit subtractor for signal <balance_acc_inc> created at line 37.
+    Found 4-bit subtractor for signal <balance_acc[3]_balance_acc_inc[3]_sub_29_OUT> created at line 38.
+    Found 2-bit adder for signal <n0109[1:0]> created at line 29.
+    Found 3-bit adder for signal <n0112[2:0]> created at line 29.
+    Found 2-bit adder for signal <n0130[1:0]> created at line 34.
+    Found 3-bit adder for signal <n0133[2:0]> created at line 34.
+    Found 4-bit adder for signal <balance_acc[3]_balance_acc_inc[3]_add_29_OUT> created at line 38.
+    Found 4-bit adder for signal <_n0160> created at line 29.
+    Found 4-bit adder for signal <_n0161> created at line 29.
+    Found 4-bit adder for signal <_n0162> created at line 29.
+    Found 4-bit adder for signal <_n0163> created at line 29.
+    Found 4-bit adder for signal <Nb1s> created at line 29.
+    Found 4-bit adder for signal <_n0165> created at line 34.
+    Found 4-bit subtractor for signal <_n0166> created at line 34.
+    Found 4-bit adder for signal <_n0167> created at line 34.
+    Found 4-bit adder for signal <_n0168> created at line 34.
+    Found 4-bit adder for signal <_n0169> created at line 34.
+    Found 4-bit adder for signal <balance> created at line 34.
+    Found 4-bit comparator greater for signal <GND_25_o_Nb1s[3]_LessThan_8_o> created at line 30
+    Found 1-bit comparator equal for signal <balance_sign_eq> created at line 35
+    Summary:
+	inferred  17 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <TMDS_encoder> synthesized.
+
+Synthesizing Unit <sdram_top>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/sdram_top.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+WARNING:Xst:647 - Input <RD2_ADDR<23:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RD2_MAX_ADDR<23:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RD2_LENGTH<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <F_CLEAR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FV> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RD2_CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/sdram_top.v" line 280: Output port <DQM> of the instance <u_sdr_data_path> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/sdram_top.v" line 289: Output port <rd_data_count> of the instance <RD_PING> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/sdram_top.v" line 289: Output port <full> of the instance <RD_PING> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/sdram_top.v" line 289: Output port <empty> of the instance <RD_PING> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/sdram_top.v" line 314: Output port <wr_data_count> of the instance <WR_16x16_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/sdram_top.v" line 314: Output port <full> of the instance <WR_16x16_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/sdram_top.v" line 314: Output port <empty> of the instance <WR_16x16_1> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <Pre_RD>.
+    Found 1-bit register for signal <Pre_WR>.
+    Found 1-bit register for signal <Read>.
+    Found 1-bit register for signal <Write>.
+    Found 1-bit register for signal <OUT_VALID>.
+    Found 1-bit register for signal <IN_REQ>.
+    Found 1-bit register for signal <mWR_DONE>.
+    Found 1-bit register for signal <mRD_DONE>.
+    Found 1-bit register for signal <mWR>.
+    Found 1-bit register for signal <mRD>.
+    Found 2-bit register for signal <CMD>.
+    Found 2-bit register for signal <RD_MASK>.
+    Found 10-bit register for signal <ST>.
+    Found 24-bit register for signal <mADDR>.
+    Found 8-bit register for signal <mLENGTH>.
+    Found 4-bit register for signal <WR_MASK>.
+    Found 1-bit register for signal <fifo_rst>.
+    Found 1-bit register for signal <pre_fifo_rst>.
+    Found 1-bit register for signal <rst_sync>.
+    Found 1-bit register for signal <wr_rst>.
+    Found 1-bit register for signal <pre_wr_rst>.
+    Found 1-bit register for signal <wfrst>.
+    Found 13-bit register for signal <SA>.
+    Found 2-bit register for signal <BA>.
+    Found 1-bit register for signal <CS_N>.
+    Found 1-bit register for signal <CKE>.
+    Found 1-bit register for signal <RAS_N>.
+    Found 1-bit register for signal <CAS_N>.
+    Found 1-bit register for signal <WE_N>.
+    Found 1-bit register for signal <PM_STOP>.
+    Found 1-bit register for signal <PM_DONE>.
+    Found 2-bit register for signal <DQM>.
+    Found 16-bit register for signal <mDATAOUT>.
+    Found 24-bit register for signal <rWR_ADDR>.
+    Found 24-bit register for signal <rRD1_ADDR>.
+    Found finite state machine <FSM_0> for signal <RD_MASK>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 2                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RESET_N (negative)                             |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <WR_MASK>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 1                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RESET_N (negative)                             |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit subtractor for signal <GND_27_o_GND_27_o_sub_63_OUT> created at line 498.
+    Found 24-bit subtractor for signal <rWR_MAX_ADDR[23]_GND_27_o_sub_80_OUT> created at line 573.
+    Found 24-bit subtractor for signal <rRD1_MAX_ADDR[23]_GND_27_o_sub_85_OUT> created at line 583.
+    Found 9-bit adder for signal <n0540[8:0][8:0]> created at line 416.
+    Found 9-bit adder for signal <n0542[8:0][8:0]> created at line 424.
+    Found 10-bit adder for signal <_n0628> created at line 424.
+    Found 10-bit adder for signal <_n0631> created at line 473.
+    Found 10-bit adder for signal <ST[9]_GND_27_o_add_49_OUT> created at line 474.
+    Found 24-bit adder for signal <rWR_ADDR[23]_GND_27_o_add_81_OUT> created at line 574.
+    Found 24-bit adder for signal <rRD1_ADDR[23]_GND_27_o_add_86_OUT> created at line 585.
+    Found 1-bit tristate buffer for signal <DQ<15>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<14>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<13>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<12>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<11>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<10>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<9>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<8>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<7>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<6>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<5>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<4>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<3>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<2>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<1>> created at line 362
+    Found 1-bit tristate buffer for signal <DQ<0>> created at line 362
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 10-bit comparator lessequal for signal <n0045> created at line 425
+    Found 32-bit comparator equal for signal <GND_27_o_GND_27_o_equal_64_o> created at line 498
+    Found 24-bit comparator greater for signal <rWR_ADDR[23]_rWR_MAX_ADDR[23]_LessThan_81_o> created at line 573
+    Found 24-bit comparator greater for signal <rRD1_ADDR[23]_rRD1_MAX_ADDR[23]_LessThan_86_o> created at line 583
+    Found 8-bit comparator greater for signal <n0225> created at line 638
+    Found 8-bit comparator greater for signal <GND_27_o_rRD1_LENGTH[7]_LessThan_120_o> created at line 670
+    Found 10-bit comparator equal for signal <GND_27_o_GND_27_o_equal_19_o> created at line 416
+    Found 10-bit comparator equal for signal <GND_27_o_GND_27_o_equal_31_o> created at line 424
+    Found 10-bit comparator equal for signal <n0078> created at line 484
+    Found 10-bit comparator equal for signal <GND_27_o_GND_27_o_equal_66_o> created at line 500
+    Summary:
+	inferred  10 Adder/Subtractor(s).
+	inferred 148 D-type flip-flop(s).
+	inferred   4 Latch(s).
+	inferred  10 Comparator(s).
+	inferred  20 Multiplexer(s).
+	inferred  16 Tristate(s).
+	inferred   2 Finite State Machine(s).
+Unit <sdram_top> synthesized.
+
+Synthesizing Unit <control_interface>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/controller.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+    Found 1-bit register for signal <READA>.
+    Found 1-bit register for signal <WRITEA>.
+    Found 1-bit register for signal <CMD_ACK>.
+    Found 1-bit register for signal <REF_REQ>.
+    Found 1-bit register for signal <REFRESH>.
+    Found 1-bit register for signal <PRECHARGE>.
+    Found 1-bit register for signal <LOAD_MODE>.
+    Found 1-bit register for signal <INIT_REQ>.
+    Found 1-bit register for signal <NOP>.
+    Found 24-bit register for signal <SADDR>.
+    Found 16-bit register for signal <timer>.
+    Found 16-bit register for signal <init_timer>.
+    Found 16-bit subtractor for signal <timer[15]_GND_28_o_sub_12_OUT> created at line 149.
+    Found 16-bit adder for signal <init_timer[15]_GND_28_o_add_18_OUT> created at line 170.
+    Found 16-bit comparator greater for signal <init_timer[15]_GND_28_o_LessThan_18_o> created at line 169
+    Found 16-bit comparator greater for signal <init_timer[15]_GND_28_o_LessThan_21_o> created at line 172
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  65 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <control_interface> synthesized.
+
+Synthesizing Unit <command>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/command.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+WARNING:Xst:647 - Input <NOP> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PM_DONE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <do_writea>.
+    Found 1-bit register for signal <do_refresh>.
+    Found 1-bit register for signal <do_precharge>.
+    Found 1-bit register for signal <do_load_mode>.
+    Found 1-bit register for signal <do_initial>.
+    Found 1-bit register for signal <command_done>.
+    Found 1-bit register for signal <rw_flag>.
+    Found 1-bit register for signal <rp_done>.
+    Found 1-bit register for signal <ex_read>.
+    Found 1-bit register for signal <ex_write>.
+    Found 1-bit register for signal <OE>.
+    Found 1-bit register for signal <do_rw>.
+    Found 1-bit register for signal <CM_ACK>.
+    Found 1-bit register for signal <REF_ACK>.
+    Found 1-bit register for signal <do_reada>.
+    Found 8-bit register for signal <command_delay>.
+    Found 4-bit register for signal <rp_shift>.
+    Found 2-bit register for signal <rw_shift>.
+    Found 1-bit register for signal <oe4>.
+    Found 13-bit register for signal <SA>.
+    Found 2-bit register for signal <BA>.
+    Found 1-bit register for signal <CS_N>.
+    Found 1-bit register for signal <RAS_N>.
+    Found 1-bit register for signal <CAS_N>.
+    Found 1-bit register for signal <WE_N>.
+    Found 1-bit register for signal <CKE>.
+    Found finite state machine <FSM_2> for signal <rw_shift>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RESET_N (negative)                             |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  48 D-type flip-flop(s).
+	inferred  34 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <command> synthesized.
+
+Synthesizing Unit <sdr_data_path>.
+    Related source file is "c:/users/yingyu/desktop/lupa_ise/lupa1.0/lupa300/data_path.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+    Found 1-bit register for signal <DQM>.
+    WARNING:Xst:2404 -  FFs/Latches <DQM<1:1>> (without init value) have a constant value of 0 in block <sdr_data_path>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <sdr_data_path> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 64x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 74
+ 10-bit adder                                          : 5
+ 10-bit subtractor                                     : 1
+ 11-bit adder                                          : 1
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 1
+ 2-bit adder                                           : 6
+ 21-bit adder                                          : 1
+ 24-bit adder                                          : 2
+ 24-bit subtractor                                     : 2
+ 3-bit adder                                           : 6
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 30
+ 4-bit addsub                                          : 3
+ 4-bit subtractor                                      : 6
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 9-bit adder                                           : 2
+# Registers                                            : 103
+ 1-bit register                                        : 64
+ 10-bit register                                       : 9
+ 11-bit register                                       : 1
+ 13-bit register                                       : 2
+ 16-bit register                                       : 5
+ 2-bit register                                        : 5
+ 21-bit register                                       : 1
+ 24-bit register                                       : 4
+ 32-bit register                                       : 2
+ 4-bit register                                        : 5
+ 6-bit register                                        : 2
+ 8-bit register                                        : 3
+# Latches                                              : 9
+ 1-bit latch                                           : 9
+# Comparators                                          : 39
+ 1-bit comparator equal                                : 3
+ 10-bit comparator equal                               : 4
+ 10-bit comparator greater                             : 7
+ 10-bit comparator lessequal                           : 3
+ 11-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 5
+ 16-bit comparator lessequal                           : 3
+ 21-bit comparator greater                             : 3
+ 21-bit comparator lessequal                           : 1
+ 24-bit comparator greater                             : 2
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 3
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 75
+ 1-bit 2-to-1 multiplexer                              : 48
+ 10-bit 2-to-1 multiplexer                             : 13
+ 13-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 3
+ 24-bit 2-to-1 multiplexer                             : 3
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# Tristates                                            : 18
+ 1-bit tristate buffer                                 : 18
+# FSMs                                                 : 3
+# Xors                                                 : 12
+ 1-bit xor2                                            : 3
+ 7-bit xor2                                            : 6
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fifo_vga.ngc>.
+Loading core <fifo_vga> for timing and area information for instance <WR_16x16_1>.
+Loading core <fifo_vga> for timing and area information for instance <RD_PING>.
+INFO:Xst:2261 - The FF/Latch <DQM_0> in Unit <SDRAMIF> is equivalent to the following FF/Latch, which will be removed : <DQM_1> 
+WARNING:Xst:1426 - The value init of the FF/Latch cfg_DONE_1 hinder the constant cleaning in the block REG_CONFIG.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch cfg_DONE_0 hinder the constant cleaning in the block REG_CONFIG.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_23> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_23> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_18> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_18> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <ISensor_Read>.
+The following registers are absorbed into counter <fot_ctr>: 1 register on signal <fot_ctr>.
+The following registers are absorbed into counter <rst_cntr>: 1 register on signal <rst_cntr>.
+The following registers are absorbed into counter <exp_ctr>: 1 register on signal <exp_ctr>.
+The following registers are absorbed into counter <frame_count>: 1 register on signal <frame_count>.
+Unit <ISensor_Read> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TMDS_encoder>.
+The following registers are absorbed into accumulator <balance_acc>: 1 register on signal <balance_acc>.
+	The following adders/subtractors are grouped into adder tree <Madd_balance_Madd1> :
+ 	<Madd__n0169_Madd> in block <TMDS_encoder>, 	<Madd_n0130[1:0]> in block <TMDS_encoder>, 	<Madd_balance_Madd> in block <TMDS_encoder>.
+	The following adders/subtractors are grouped into adder tree <Madd_Nb1s_Madd1> :
+ 	<Madd__n0160> in block <TMDS_encoder>, 	<Madd__n0161> in block <TMDS_encoder>, 	<Madd__n0163_Madd> in block <TMDS_encoder>, 	<Madd_n0109[1:0]> in block <TMDS_encoder>, 	<Madd_Nb1s_Madd> in block <TMDS_encoder>.
+Unit <TMDS_encoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <control_interface>.
+The following registers are absorbed into counter <init_timer>: 1 register on signal <init_timer>.
+Unit <control_interface> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hdmi_top>.
+The following registers are absorbed into counter <cntr>: 1 register on signal <cntr>.
+The following registers are absorbed into counter <contX>: 1 register on signal <contX>.
+The following registers are absorbed into counter <contY>: 1 register on signal <contY>.
+The following registers are absorbed into counter <TMDS_modulo>: 1 register on signal <TMDS_modulo>.
+Unit <hdmi_top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sdram_top>.
+The following registers are absorbed into accumulator <rWR_ADDR>: 1 register on signal <rWR_ADDR>.
+The following registers are absorbed into accumulator <rRD1_ADDR>: 1 register on signal <rRD1_ADDR>.
+Unit <sdram_top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_upload>.
+INFO:Xst:3231 - The small RAM <Mram__n0103> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <spi_upload> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top>.
+The following registers are absorbed into counter <Count>: 1 register on signal <Count>.
+The following registers are absorbed into counter <Reset_Count>: 1 register on signal <Reset_Count>.
+Unit <top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 64x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 19
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 1
+ 16-bit subtractor                                     : 1
+ 24-bit subtractor                                     : 2
+ 4-bit adder carry in                                  : 3
+ 4-bit subtractor                                      : 6
+ 6-bit adder                                           : 1
+ 9-bit adder                                           : 2
+# Adder Trees                                          : 6
+ 4-bit / 4-inputs adder tree                           : 3
+ 4-bit / 6-inputs adder tree                           : 3
+# Counters                                             : 11
+ 10-bit up counter                                     : 2
+ 11-bit up counter                                     : 1
+ 16-bit up counter                                     : 3
+ 21-bit up counter                                     : 1
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 5
+ 24-bit up loadable accumulator                        : 2
+ 4-bit updown accumulator                              : 3
+# Registers                                            : 282
+ Flip-Flops                                            : 282
+# Comparators                                          : 39
+ 1-bit comparator equal                                : 3
+ 10-bit comparator equal                               : 4
+ 10-bit comparator greater                             : 7
+ 10-bit comparator lessequal                           : 3
+ 11-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 5
+ 16-bit comparator lessequal                           : 3
+ 21-bit comparator greater                             : 3
+ 21-bit comparator lessequal                           : 1
+ 24-bit comparator greater                             : 2
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 3
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 72
+ 1-bit 2-to-1 multiplexer                              : 47
+ 10-bit 2-to-1 multiplexer                             : 13
+ 13-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 3
+ 24-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 3
+# Xors                                                 : 12
+ 1-bit xor2                                            : 3
+ 7-bit xor2                                            : 6
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch cfg_DONE_1 hinder the constant cleaning in the block spi_upload.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch cfg_DONE_0 hinder the constant cleaning in the block spi_upload.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_23> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_18> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_18> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_23> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <DQM_0> in Unit <sdram_top> is equivalent to the following FF/Latch, which will be removed : <DQM_1> 
+WARNING:Xst:2677 - Node <u_sdr_data_path/DQM> of sequential type is unconnected in block <sdram_top>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SDRAMIF/FSM_1> on signal <WR_MASK[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0
+ 0001  | 1
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SDRAMIF/FSM_0> on signal <RD_MASK[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0
+ 01    | 1
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SDRAMIF/u_command/FSM_2> on signal <rw_shift[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+WARNING:Xst:2677 - Node <frame_count_5> of sequential type is unconnected in block <ISensor_Read>.
+WARNING:Xst:2677 - Node <frame_count_6> of sequential type is unconnected in block <ISensor_Read>.
+WARNING:Xst:2677 - Node <frame_count_7> of sequential type is unconnected in block <ISensor_Read>.
+WARNING:Xst:1710 - FF/Latch <rRD1_ADDR_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_ADDR_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_ADDR_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_ADDR_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_ADDR_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_5> has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_4> has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_3> has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_2> has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_1> has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_0> has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_7> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <cntr_30> of sequential type is unconnected in block <hdmi_top>.
+WARNING:Xst:2677 - Node <cntr_31> of sequential type is unconnected in block <hdmi_top>.
+INFO:Xst:1901 - Instance DIVIDBY4/pll_base_inst in unit DIVIDBY4/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:1901 - Instance GLOBAL/pll_base_inst in unit GLOBAL/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+WARNING:Xst:1989 - Unit <hdmi_top>: instances <iRED>, <iGREEN> of unit <TMDS_encoder> are equivalent, second instance is removed
+WARNING:Xst:2677 - Node <FIFO_Reset> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_16> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_30> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Reset_Count_31> of sequential type is unconnected in block <top>.
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_9> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_9> 
+WARNING:Xst:2016 - Found a loop when searching source clock on port 'clk_100ld_INV_1_o:clk_100ld_INV_1_o'
+Last warning will be issued only once.
+
+Optimizing unit <top> ...
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/rWR_ADDR_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/rWR_ADDR_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/rWR_ADDR_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/rWR_ADDR_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/rWR_ADDR_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/rWR_ADDR_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/rWR_ADDR_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/rWR_ADDR_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <ISensor_Read> ...
+
+Optimizing unit <spi_upload> ...
+
+Optimizing unit <control_interface> ...
+
+Optimizing unit <command> ...
+
+Optimizing unit <hdmi_top> ...
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_8> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_8> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_7> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_7> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_6> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_6> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_5> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_5> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_4> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_4> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_3> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_3> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_2> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_2> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_7> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_7> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_6> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_6> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_5> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_5> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_4> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_4> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_3> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_3> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_1> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_1> 
+
+Optimizing unit <TMDS_encoder> ...
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <SDRAMIF/PM_DONE> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <SDRAMIF/u_control_interface/NOP> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_16> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_ADDR_23> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/rWR_ADDR_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/mADDR_23> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SDRAMIF/u_control_interface/SADDR_23> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SDRAMIF/u_command/BA_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SDRAMIF/BA_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <LUPA300/exp_ctr_20> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <LUPA300/exp_ctr_19> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/u_command/SA_12> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/u_command/SA_11> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/SA_12> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/SA_11> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/u_control_interface/SADDR_22> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/u_control_interface/SADDR_21> 
+INFO:Xst:2261 - The FF/Latch <HDMI_PORT2/iBLUE/balance_acc_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <HDMI_PORT2/iRED/balance_acc_0> 
+INFO:Xst:2261 - The FF/Latch <HDMI_PORT2/iBLUE/balance_acc_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <HDMI_PORT2/iRED/balance_acc_1> 
+INFO:Xst:2261 - The FF/Latch <HDMI_PORT2/iBLUE/balance_acc_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <HDMI_PORT2/iRED/balance_acc_2> 
+INFO:Xst:2261 - The FF/Latch <HDMI_PORT2/iBLUE/balance_acc_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <HDMI_PORT2/iRED/balance_acc_3> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/WR_MASK_FSM_FFd1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/mWR> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/RD_MASK_FSM_FFd1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/mRD> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/mADDR_22> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <SDRAMIF/mADDR_21> <SDRAMIF/mADDR_20> <SDRAMIF/mADDR_19> 
+
+Mapping all equations...
+WARNING:Xst:2677 - Node <SDRAMIF/u_control_interface/SADDR_20> of sequential type is unconnected in block <top>.
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/u_control_interface/SADDR_22> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/u_control_interface/SADDR_19> 
+INFO:Xst:2261 - The FF/Latch <HDMI_PORT2/TMDS_shift_green_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <HDMI_PORT2/TMDS_shift_red_0> 
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 5.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/RD_PING> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/WR_16x16_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/WR_16x16_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/WR_16x16_1> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/WR_16x16_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/RD_PING> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/WR_16x16_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/WR_16x16_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/WR_16x16_1> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/WR_16x16_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+FlipFlop LUPA300/rgSTART has been replicated 1 time(s) to handle iob=true attribute.
+Latch LUPA300/REG_CONFIG/cfg_DONE_1 has been replicated 1 time(s) to handle iob=true attribute.
+Latch LUPA300/REG_CONFIG/cfg_DONE_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+Processing Unit <top> :
+	Found 2-bit shift register for signal <SDRAMIF/CKE>.
+	Found 2-bit shift register for signal <SDRAMIF/CS_N>.
+Unit <top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 371
+ Flip-Flops                                            : 371
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1054
+#      GND                         : 3
+#      INV                         : 39
+#      LUT1                        : 98
+#      LUT2                        : 114
+#      LUT3                        : 102
+#      LUT4                        : 66
+#      LUT5                        : 77
+#      LUT6                        : 191
+#      MUXCY                       : 169
+#      MUXF7                       : 9
+#      VCC                         : 3
+#      XORCY                       : 183
+# FlipFlops/Latches                : 652
+#      FD                          : 86
+#      FD_1                        : 10
+#      FDC                         : 247
+#      FDCE                        : 135
+#      FDE                         : 18
+#      FDP                         : 26
+#      FDPE                        : 8
+#      FDR                         : 101
+#      FDRE                        : 10
+#      FDS                         : 2
+#      LD                          : 7
+#      ODDR2                       : 2
+# RAMS                             : 2
+#      RAMB8BWER                   : 2
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 10
+#      BUFG                        : 10
+# IO Buffers                       : 70
+#      IBUF                        : 10
+#      IBUFG                       : 1
+#      IOBUF                       : 16
+#      OBUF                        : 37
+#      OBUFDS                      : 4
+#      OBUFT                       : 2
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# Others                           : 2
+#      PLL_ADV                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx25ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             646  out of  30064     2%  
+ Number of Slice LUTs:                  689  out of  15032     4%  
+    Number used as Logic:               687  out of  15032     4%  
+    Number used as Memory:                2  out of   3664     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    886
+   Number with an unused Flip Flop:     240  out of    886    27%  
+   Number with an unused LUT:           197  out of    886    22%  
+   Number of fully used LUT-FF pairs:   449  out of    886    50%  
+   Number of unique control sets:        61
+
+IO Utilization: 
+ Number of IOs:                          76
+ Number of bonded IOBs:                  74  out of    186    39%  
+    IOB Flip Flops/Latches:               6
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     52     1%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:               10  out of     16    62%  
+ Number of PLL_ADVs:                      2  out of      2   100%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------+---------------------------------------+-------+
+Clock Signal                                                     | Clock buffer(FF name)                 | Load  |
+-----------------------------------------------------------------+---------------------------------------+-------+
+GLOBAL/pll_base_inst/CLKOUT3                                     | BUFG                                  | 18    |
+GLOBAL/pll_base_inst/CLKOUT0                                     | BUFG                                  | 2     |
+GLOBAL/pll_base_inst/CLKOUT3                                     | DCM_SP:CLKFX                          | 50    |
+GLOBAL/pll_base_inst/CLKOUT1                                     | BUFG                                  | 352   |
+FRAME_VALID                                                      | IBUF                                  | 7     |
+LINE_VALID                                                       | IBUF                                  | 2     |
+LUPA300/REG_CONFIG/_n0103<6>(LUPA300/REG_CONFIG_Mram__n0103111:O)| NONE(*)(LUPA300/REG_CONFIG/cfg_DONE_0)| 2     |
+LUPA300/REG_CONFIG/_n0103<5>(LUPA300/REG_CONFIG_Mram__n010321:O) | NONE(*)(LUPA300/REG_CONFIG/cfg_DONE_1)| 2     |
+LUPA300/REG_CONFIG/_n0103<7>(LUPA300/REG_CONFIG_Mram__n010312:O) | NONE(*)(LUPA300/REG_CONFIG/spi_dat)   | 1     |
+LUPA300/REG_CONFIG/_n0103<4>(LUPA300/REG_CONFIG_Mram__n010331:O) | NONE(*)(LUPA300/REG_CONFIG/spi_clk)   | 1     |
+LUPA300/REG_CONFIG/_n0103<3>(LUPA300/REG_CONFIG_Mram__n010341:O) | NONE(*)(LUPA300/REG_CONFIG/spi_en)    | 1     |
+LUPA300/DIVIDBY4/pll_base_inst/CLKOUT0                           | BUFG                                  | 12    |
+clk_25m                                                          | BUFG                                  | 112   |
+GLOBAL/pll_base_inst/CLKOUT2                                     | BUFG                                  | 25    |
+GLOBAL/pll_base_inst/CLKOUT3                                     | DCM_SP:CLKFX180                       | 73    |
+-----------------------------------------------------------------+---------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 20.569ns (Maximum Frequency: 48.616MHz)
+   Minimum input arrival time before clock: 6.478ns
+   Maximum output required time after clock: 5.037ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'GLOBAL/pll_base_inst/CLKOUT3'
+  Clock period: 10.032ns (frequency: 99.684MHz)
+  Total number of paths / destination ports: 1731 / 271
+-------------------------------------------------------------------------
+Delay:               6.270ns (Levels of Logic = 4)
+  Source:            LUPA300/exp_ctr_7 (FF)
+  Destination:       LUPA300/exp_ctr_0 (FF)
+  Source Clock:      GLOBAL/pll_base_inst/CLKOUT3 rising 1.6X
+  Destination Clock: GLOBAL/pll_base_inst/CLKOUT3 rising 1.6X
+
+  Data Path: LUPA300/exp_ctr_7 to LUPA300/exp_ctr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.447   1.059  LUPA300/exp_ctr_7 (LUPA300/exp_ctr_7)
+     LUT5:I0->O            1   0.203   0.924  LUPA300/Mcount_exp_ctr_val1 (LUPA300/Mcount_exp_ctr_val1)
+     LUT5:I0->O            1   0.203   0.924  LUPA300/Mcount_exp_ctr_val2 (LUPA300/Mcount_exp_ctr_val2)
+     LUT6:I1->O            1   0.203   0.580  LUPA300/Mcount_exp_ctr_val3 (LUPA300/Mcount_exp_ctr_val3)
+     LUT5:I4->O           20   0.205   1.092  LUPA300/Mcount_exp_ctr_val4 (LUPA300/Mcount_exp_ctr_val)
+     FDR:R                     0.430          LUPA300/exp_ctr_0
+    ----------------------------------------
+    Total                      6.270ns (1.691ns logic, 4.579ns route)
+                                       (27.0% logic, 73.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'GLOBAL/pll_base_inst/CLKOUT1'
+  Clock period: 6.116ns (frequency: 163.496MHz)
+  Total number of paths / destination ports: 7953 / 638
+-------------------------------------------------------------------------
+Delay:               6.116ns (Levels of Logic = 4)
+  Source:            SDRAMIF/ST_7 (FF)
+  Destination:       SDRAMIF/mADDR_22 (FF)
+  Source Clock:      GLOBAL/pll_base_inst/CLKOUT1 rising
+  Destination Clock: GLOBAL/pll_base_inst/CLKOUT1 rising
+
+  Data Path: SDRAMIF/ST_7 to SDRAMIF/mADDR_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.447   0.962  SDRAMIF/ST_7 (SDRAMIF/ST_7)
+     LUT4:I0->O            3   0.203   0.651  SDRAMIF/GND_27_o_GND_27_o_equal_31_o1011 (SDRAMIF/GND_27_o_GND_27_o_equal_31_o101)
+     LUT5:I4->O            8   0.205   0.803  SDRAMIF/IN_REQ_PWR_26_o_MUX_403_o<9>11 (SDRAMIF/IN_REQ_PWR_26_o_MUX_403_o<9>1)
+     LUT3:I2->O            6   0.205   1.089  SDRAMIF/ST[9]_GND_27_o_equal_52_o<9>1 (SDRAMIF/ST[9]_GND_27_o_equal_52_o)
+     LUT6:I1->O           17   0.203   1.027  SDRAMIF/_n0789_inv1 (SDRAMIF/_n0789_inv)
+     FDCE:CE                   0.322          SDRAMIF/mLENGTH_5
+    ----------------------------------------
+    Total                      6.116ns (1.585ns logic, 4.531ns route)
+                                       (25.9% logic, 74.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FRAME_VALID'
+  Clock period: 1.780ns (frequency: 561.719MHz)
+  Total number of paths / destination ports: 15 / 5
+-------------------------------------------------------------------------
+Delay:               1.780ns (Levels of Logic = 6)
+  Source:            LUPA300/frame_count_0 (FF)
+  Destination:       LUPA300/frame_count_4 (FF)
+  Source Clock:      FRAME_VALID rising
+  Destination Clock: FRAME_VALID rising
+
+  Data Path: LUPA300/frame_count_0 to LUPA300/frame_count_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  LUPA300/frame_count_0 (LUPA300/frame_count_0)
+     INV:I->O              1   0.206   0.000  LUPA300/Mcount_frame_count_lut<0>_INV_0 (LUPA300/Mcount_frame_count_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  LUPA300/Mcount_frame_count_cy<0> (LUPA300/Mcount_frame_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  LUPA300/Mcount_frame_count_cy<1> (LUPA300/Mcount_frame_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  LUPA300/Mcount_frame_count_cy<2> (LUPA300/Mcount_frame_count_cy<2>)
+     MUXCY:CI->O           0   0.019   0.000  LUPA300/Mcount_frame_count_cy<3> (LUPA300/Mcount_frame_count_cy<3>)
+     XORCY:CI->O           1   0.180   0.000  LUPA300/Mcount_frame_count_xor<4> (LUPA300/Result<4>3)
+     FD:D                      0.102          LUPA300/frame_count_4
+    ----------------------------------------
+    Total                      1.780ns (1.164ns logic, 0.616ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'LINE_VALID'
+  Clock period: 1.313ns (frequency: 761.470MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.313ns (Levels of Logic = 1)
+  Source:            LUPA300/Cstart (FF)
+  Destination:       LUPA300/INT_TIME1 (FF)
+  Source Clock:      LINE_VALID falling
+  Destination Clock: LINE_VALID falling
+
+  Data Path: LUPA300/Cstart to LUPA300/INT_TIME1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             2   0.447   0.616  LUPA300/Cstart (LUPA300/Cstart)
+     MUXF7:S->O            1   0.148   0.000  LUPA300/Mmux_GND_9_o_fot_end_MUX_248_o19 (LUPA300/GND_9_o_fot_end_MUX_248_o)
+     FD_1:D                    0.102          LUPA300/INT_TIME1
+    ----------------------------------------
+    Total                      1.313ns (0.697ns logic, 0.616ns route)
+                                       (53.1% logic, 46.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'LUPA300/DIVIDBY4/pll_base_inst/CLKOUT0'
+  Clock period: 8.135ns (frequency: 122.918MHz)
+  Total number of paths / destination ports: 95 / 15
+-------------------------------------------------------------------------
+Delay:               4.068ns (Levels of Logic = 2)
+  Source:            LUPA300/REG_CONFIG/state_1 (FF)
+  Destination:       LUPA300/REG_CONFIG/next_4 (FF)
+  Source Clock:      LUPA300/DIVIDBY4/pll_base_inst/CLKOUT0 falling
+  Destination Clock: LUPA300/DIVIDBY4/pll_base_inst/CLKOUT0 rising
+
+  Data Path: LUPA300/REG_CONFIG/state_1 to LUPA300/REG_CONFIG/next_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q            10   0.447   1.221  LUPA300/REG_CONFIG/state_1 (LUPA300/REG_CONFIG/state_1)
+     LUT6:I0->O            4   0.203   0.912  LUPA300/REG_CONFIG/_n0115<1>21 (LUPA300/REG_CONFIG/_n0115<1>2)
+     LUT3:I0->O            3   0.205   0.650  LUPA300/REG_CONFIG/n0021_01 (LUPA300/REG_CONFIG/n0021_0)
+     FDR:R                     0.430          LUPA300/REG_CONFIG/next_2
+    ----------------------------------------
+    Total                      4.068ns (1.285ns logic, 2.783ns route)
+                                       (31.6% logic, 68.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_25m'
+  Clock period: 20.569ns (frequency: 48.616MHz)
+  Total number of paths / destination ports: 20346 / 229
+-------------------------------------------------------------------------
+Delay:               10.285ns (Levels of Logic = 9)
+  Source:            SDRAMIF/RD_PING/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (RAM)
+  Destination:       HDMI_PORT2/iBLUE/balance_acc_2 (FF)
+  Source Clock:      clk_25m falling
+  Destination Clock: clk_25m rising
+
+  Data Path: SDRAMIF/RD_PING/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram to HDMI_PORT2/iBLUE/balance_acc_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO1   17   1.850   1.256  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (dout<9>)
+     end scope: 'SDRAMIF/RD_PING:dout<9>'
+     LUT3:I0->O            1   0.205   0.579  HDMI_PORT2/iBLUE/ADDERTREE_INTERNAL_Madd3_lut<0>1 (HDMI_PORT2/iBLUE/ADDERTREE_INTERNAL_Madd3_lut<0>)
+     MUXF7:S->O            4   0.148   0.912  HDMI_PORT2/iBLUE/XNOR7_SW0 (N93)
+     LUT6:I3->O           11   0.205   0.883  HDMI_PORT2/iBLUE/ADDERTREE_INTERNAL_Madd5_cy<1>11 (HDMI_PORT2/iBLUE/ADDERTREE_INTERNAL_Madd5_cy<1>)
+     LUT6:I5->O            1   0.205   0.580  HDMI_PORT2/iBLUE/GND_25_o_GND_25_o_OR_57_o3 (HDMI_PORT2/iBLUE/GND_25_o_GND_25_o_OR_57_o3)
+     LUT5:I4->O            9   0.205   0.830  HDMI_PORT2/iBLUE/GND_25_o_GND_25_o_OR_57_o4 (HDMI_PORT2/iBLUE/GND_25_o_GND_25_o_OR_57_o)
+     LUT5:I4->O           20   0.205   1.093  HDMI_PORT2/iBLUE/Mmux_invert_q_m11 (HDMI_PORT2/iBLUE/invert_q_m)
+     LUT5:I4->O            2   0.205   0.617  HDMI_PORT2/iBLUE/Maccum_balance_acc_lut<0>11 (HDMI_PORT2/iBLUE/Maccum_balance_acc_lut<0>)
+     LUT6:I5->O            1   0.205   0.000  HDMI_PORT2/iBLUE/Maccum_balance_acc_xor<2>11 (HDMI_PORT2/iBLUE/Result<2>)
+     FDR:D                     0.102          HDMI_PORT2/iBLUE/balance_acc_2
+    ----------------------------------------
+    Total                     10.285ns (3.535ns logic, 6.750ns route)
+                                       (34.4% logic, 65.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'GLOBAL/pll_base_inst/CLKOUT2'
+  Clock period: 2.739ns (frequency: 365.097MHz)
+  Total number of paths / destination ports: 68 / 29
+-------------------------------------------------------------------------
+Delay:               2.739ns (Levels of Logic = 1)
+  Source:            HDMI_PORT2/TMDS_modulo_0 (FF)
+  Destination:       HDMI_PORT2/TMDS_modulo_3 (FF)
+  Source Clock:      GLOBAL/pll_base_inst/CLKOUT2 rising
+  Destination Clock: GLOBAL/pll_base_inst/CLKOUT2 rising
+
+  Data Path: HDMI_PORT2/TMDS_modulo_0 to HDMI_PORT2/TMDS_modulo_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.447   0.943  HDMI_PORT2/TMDS_modulo_0 (HDMI_PORT2/TMDS_modulo_0)
+     LUT4:I1->O            5   0.205   0.714  HDMI_PORT2/GND_24_o_GND_24_o_equal_37_o<3>1 (HDMI_PORT2/GND_24_o_GND_24_o_equal_37_o)
+     FDR:R                     0.430          HDMI_PORT2/TMDS_modulo_0
+    ----------------------------------------
+    Total                      2.739ns (1.082ns logic, 1.657ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'GLOBAL/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              2.694ns (Levels of Logic = 2)
+  Source:            FRAME_VALID (PAD)
+  Destination:       SDRAMIF/pre_wr_rst (FF)
+  Destination Clock: GLOBAL/pll_base_inst/CLKOUT1 rising
+
+  Data Path: FRAME_VALID to SDRAMIF/pre_wr_rst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   1.167  FRAME_VALID_IBUF (FRAME_VALID_IBUF)
+     LUT6:I0->O            2   0.203   0.000  LUPA300/FFR_REQ11 (ACS)
+     FD:D                      0.102          SDRAMIF/pre_wr_rst
+    ----------------------------------------
+    Total                      2.694ns (1.527ns logic, 1.167ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'GLOBAL/pll_base_inst/CLKOUT3'
+  Total number of paths / destination ports: 64 / 36
+-------------------------------------------------------------------------
+Offset:              6.478ns (Levels of Logic = 7)
+  Source:            FRAME_VALID (PAD)
+  Destination:       SDRAMIF/WR_16x16_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (FF)
+  Destination Clock: GLOBAL/pll_base_inst/CLKOUT3 rising 1.6X +180
+
+  Data Path: FRAME_VALID to SDRAMIF/WR_16x16_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   1.167  FRAME_VALID_IBUF (FRAME_VALID_IBUF)
+     LUT6:I0->O            2   0.203   0.617  LUPA300/FFR_REQ11 (ACS)
+     LUT2:I1->O            2   0.205   0.961  LUPA300/FFR_REQ2 (wr_req)
+     begin scope: 'SDRAMIF/WR_16x16_1:wr_en'
+     LUT5:I0->O            1   0.203   0.808  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_12_o14 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_12_o13)
+     LUT6:I3->O            1   0.205   0.580  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_12_o15 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_12_o14)
+     LUT5:I4->O            2   0.205   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_12_o19 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1_GND_190_o_MUX_12_o)
+     FDP:D                     0.102          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i
+    ----------------------------------------
+    Total                      6.478ns (2.345ns logic, 4.133ns route)
+                                       (36.2% logic, 63.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GLOBAL/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 57 / 41
+-------------------------------------------------------------------------
+Offset:              5.037ns (Levels of Logic = 2)
+  Source:            SDRAMIF/WR_16x16_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (RAM)
+  Destination:       DQ<15> (PAD)
+  Source Clock:      GLOBAL/pll_base_inst/CLKOUT1 rising
+
+  Data Path: SDRAMIF/WR_16x16_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram to DQ<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO11    2   1.850   0.616  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (dout<15>)
+     end scope: 'SDRAMIF/WR_16x16_1:dout<15>'
+     OBUF:I->O                 2.571          LED_indicate_7_OBUF (LED_indicate<7>)
+    ----------------------------------------
+    Total                      5.037ns (4.421ns logic, 0.616ns route)
+                                       (87.8% logic, 12.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GLOBAL/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            HDMI_PORT2/TMDS_shift_green_0 (FF)
+  Destination:       TMDS_POSITIVE<2> (PAD)
+  Source Clock:      GLOBAL/pll_base_inst/CLKOUT2 rising
+
+  Data Path: HDMI_PORT2/TMDS_shift_green_0 to TMDS_POSITIVE<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  HDMI_PORT2/TMDS_shift_green_0 (HDMI_PORT2/TMDS_shift_green_0)
+     OBUFDS:I->O               2.571          HDMI_PORT2/mGREEN (TMDS_POSITIVE<1>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GLOBAL/pll_base_inst/CLKOUT3'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.555ns (Levels of Logic = 2)
+  Source:            LUPA300/rst_n (FF)
+  Destination:       LUPA_RST (PAD)
+  Source Clock:      GLOBAL/pll_base_inst/CLKOUT3 rising 1.6X
+
+  Data Path: LUPA300/rst_n to LUPA_RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.755  LUPA300/rst_n (LUPA300/rst_n)
+     LUT3:I1->O            1   0.203   0.579  LUPA300/n0080<0>1 (LUPA_RST_OBUF)
+     OBUF:I->O                 2.571          LUPA_RST_OBUF (LUPA_RST)
+    ----------------------------------------
+    Total                      4.555ns (3.221ns logic, 1.334ns route)
+                                       (70.7% logic, 29.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FRAME_VALID'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.453ns (Levels of Logic = 2)
+  Source:            LUPA300/rgSTART (FF)
+  Destination:       LUPA_RST (PAD)
+  Source Clock:      FRAME_VALID falling
+
+  Data Path: LUPA300/rgSTART to LUPA_RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             3   0.447   0.651  LUPA300/rgSTART (LUPA300/rgSTART)
+     LUT3:I2->O            1   0.205   0.579  LUPA300/n0080<0>1 (LUPA_RST_OBUF)
+     OBUF:I->O                 2.571          LUPA_RST_OBUF (LUPA_RST)
+    ----------------------------------------
+    Total                      4.453ns (3.223ns logic, 1.230ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LUPA300/REG_CONFIG/_n0103<5>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            LUPA300/REG_CONFIG/cfg_DONE_1_1 (LATCH)
+  Destination:       LED_indicate<1> (PAD)
+  Source Clock:      LUPA300/REG_CONFIG/_n0103<5> falling
+
+  Data Path: LUPA300/REG_CONFIG/cfg_DONE_1_1 to LED_indicate<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  LUPA300/REG_CONFIG/cfg_DONE_1_1 (LUPA300/REG_CONFIG/cfg_DONE_1_1)
+     OBUF:I->O                 2.571          LED_indicate_1_OBUF (LED_indicate<1>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LUPA300/REG_CONFIG/_n0103<6>'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.698ns (Levels of Logic = 2)
+  Source:            LUPA300/REG_CONFIG/cfg_DONE_0 (LATCH)
+  Destination:       LUPA_RST (PAD)
+  Source Clock:      LUPA300/REG_CONFIG/_n0103<6> falling
+
+  Data Path: LUPA300/REG_CONFIG/cfg_DONE_0 to LUPA_RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.498   0.845  LUPA300/REG_CONFIG/cfg_DONE_0 (LUPA300/REG_CONFIG/cfg_DONE_0)
+     LUT3:I0->O            1   0.205   0.579  LUPA300/n0080<0>1 (LUPA_RST_OBUF)
+     OBUF:I->O                 2.571          LUPA_RST_OBUF (LUPA_RST)
+    ----------------------------------------
+    Total                      4.698ns (3.274ns logic, 1.424ns route)
+                                       (69.7% logic, 30.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LUPA300/REG_CONFIG/_n0103<3>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            LUPA300/REG_CONFIG/spi_en (LATCH)
+  Destination:       SPI_EN (PAD)
+  Source Clock:      LUPA300/REG_CONFIG/_n0103<3> falling
+
+  Data Path: LUPA300/REG_CONFIG/spi_en to SPI_EN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  LUPA300/REG_CONFIG/spi_en (LUPA300/REG_CONFIG/spi_en)
+     OBUF:I->O                 2.571          SPI_EN_OBUF (SPI_EN)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LUPA300/REG_CONFIG/_n0103<4>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            LUPA300/REG_CONFIG/spi_clk (LATCH)
+  Destination:       SPI_CLK (PAD)
+  Source Clock:      LUPA300/REG_CONFIG/_n0103<4> falling
+
+  Data Path: LUPA300/REG_CONFIG/spi_clk to SPI_CLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  LUPA300/REG_CONFIG/spi_clk (LUPA300/REG_CONFIG/spi_clk)
+     OBUF:I->O                 2.571          SPI_CLK_OBUF (SPI_CLK)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LUPA300/REG_CONFIG/_n0103<7>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            LUPA300/REG_CONFIG/spi_dat (LATCH)
+  Destination:       SPI_DAT (PAD)
+  Source Clock:      LUPA300/REG_CONFIG/_n0103<7> falling
+
+  Data Path: LUPA300/REG_CONFIG/spi_dat to SPI_DAT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  LUPA300/REG_CONFIG/spi_dat (LUPA300/REG_CONFIG/spi_dat)
+     OBUF:I->O                 2.571          SPI_DAT_OBUF (SPI_DAT)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LINE_VALID'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            LUPA300/INT_TIME1 (FF)
+  Destination:       INT_TIME1 (PAD)
+  Source Clock:      LINE_VALID falling
+
+  Data Path: LUPA300/INT_TIME1 to INT_TIME1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             1   0.447   0.579  LUPA300/INT_TIME1 (LUPA300/INT_TIME1)
+     OBUF:I->O                 2.571          INT_TIME1_OBUF (INT_TIME1)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock FRAME_VALID
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+FRAME_VALID                 |    1.780|         |         |         |
+GLOBAL/pll_base_inst/CLKOUT3|         |         |    3.573|         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock GLOBAL/pll_base_inst/CLKOUT1
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+FRAME_VALID                 |    1.713|         |         |         |
+GLOBAL/pll_base_inst/CLKOUT1|    6.116|         |         |         |
+GLOBAL/pll_base_inst/CLKOUT3|    3.918|         |         |         |
+clk_25m                     |    1.378|    1.128|         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock GLOBAL/pll_base_inst/CLKOUT2
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+GLOBAL/pll_base_inst/CLKOUT2|    2.739|         |         |         |
+clk_25m                     |    1.436|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock GLOBAL/pll_base_inst/CLKOUT3
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+FRAME_VALID                 |    5.497|         |         |         |
+GLOBAL/pll_base_inst/CLKOUT1|    1.679|         |         |         |
+GLOBAL/pll_base_inst/CLKOUT3|    6.270|         |         |         |
+LINE_VALID                  |         |    2.582|         |         |
+LUPA300/REG_CONFIG/_n0103<5>|         |    3.033|         |         |
+LUPA300/REG_CONFIG/_n0103<6>|         |    3.088|         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock LINE_VALID
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+GLOBAL/pll_base_inst/CLKOUT3|         |         |    4.419|         |
+LINE_VALID                  |         |         |    1.313|         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock LUPA300/DIVIDBY4/pll_base_inst/CLKOUT0
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+FRAME_VALID                           |         |    2.384|         |         |
+LUPA300/DIVIDBY4/pll_base_inst/CLKOUT0|    2.584|    4.068|    1.322|         |
+--------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock LUPA300/REG_CONFIG/_n0103<3>
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+LUPA300/DIVIDBY4/pll_base_inst/CLKOUT0|         |         |    1.908|         |
+--------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock LUPA300/REG_CONFIG/_n0103<4>
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+LUPA300/DIVIDBY4/pll_base_inst/CLKOUT0|         |         |    1.908|         |
+--------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock LUPA300/REG_CONFIG/_n0103<7>
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+LUPA300/DIVIDBY4/pll_base_inst/CLKOUT0|         |         |    1.908|         |
+--------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_25m
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+GLOBAL/pll_base_inst/CLKOUT1|         |         |    1.706|         |
+clk_25m                     |    6.147|   10.285|    3.545|         |
+----------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.06 secs
+ 
+--> 
+
+Total memory usage is 259580 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  221 (   0 filtered)
+Number of infos    :   60 (   0 filtered)
+

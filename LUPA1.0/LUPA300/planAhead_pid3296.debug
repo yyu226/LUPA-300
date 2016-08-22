@@ -1,0 +1,43 @@
+#-------------------------------------------------------------------------------
+# PlanAhead v13.3 (64-bit)
+# Build 147507 by hdbuild on Tue Oct  4 19:13:50 MDT 2011
+# Current time: 6/8/16 5:33:36 PM
+# Process ID: 3296
+# Platform: Windows
+#
+# This file is an indication that an internal PlanAhead error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+6/8/16 5:33:36 PM
+java.lang.RuntimeException: C:\Users\yingyu\AppData\Roaming\Xilinx\PlanAhead\13.3\layouts\application\default.layout (The requested operation cannot be performed on a file with a user-mapped section open)
+	at com.jidesoft.swing.J.aJ(SourceFile:563)
+	at com.jidesoft.swing.J.fU(SourceFile:501)
+	at ui.L.fU(SourceFile:58)
+	at ui.am.componentResized(SourceFile:40)
+	at java.awt.AWTEventMulticaster.componentResized(AWTEventMulticaster.java:143)
+	at java.awt.AWTEventMulticaster.componentResized(AWTEventMulticaster.java:142)
+	at java.awt.Component.processComponentEvent(Component.java:6093)
+	at java.awt.Component.processEvent(Component.java:6047)
+	at java.awt.Container.processEvent(Container.java:2041)
+	at java.awt.Window.processEvent(Window.java:1836)
+	at ui.V.processEvent(SourceFile:970)
+	at java.awt.Component.dispatchEventImpl(Component.java:4630)
+	at java.awt.Container.dispatchEventImpl(Container.java:2099)
+	at java.awt.Window.dispatchEventImpl(Window.java:2478)
+	at java.awt.Component.dispatchEvent(Component.java:4460)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:599)
+	at ui.frmwork.K.dispatchEvent(SourceFile:73)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+Caused by: java.io.FileNotFoundException: C:\Users\yingyu\AppData\Roaming\Xilinx\PlanAhead\13.3\layouts\application\default.layout (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:179)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:131)
+	at com.jidesoft.swing.J.aJ(SourceFile:553)
+	... 22 more
+

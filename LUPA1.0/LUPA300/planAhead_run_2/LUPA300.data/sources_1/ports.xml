@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="DATA_IMAGE">
+			<Port Id="9" Dir="IN"/>
+			<Port Id="8" Dir="IN"/>
+			<Port Id="7" Dir="IN"/>
+			<Port Id="6" Dir="IN"/>
+			<Port Id="5" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="0" Dir="IN"/>
+		</Bus>
+		<Bus Id="SA">
+			<Port Id="12" Dir="OUT"/>
+			<Port Id="11" Dir="OUT"/>
+			<Port Id="10" Dir="OUT"/>
+			<Port Id="9" Dir="OUT"/>
+			<Port Id="8" Dir="OUT"/>
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="BA">
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="DQ">
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="0" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="TMDS_POSITIVE">
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="TMDS_NEGTIVE">
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="LED_indicate">
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Port Id="CLOCK_IN" Dir="IN"/>
+		<Port Id="LINE_VALID" Dir="IN"/>
+		<Port Id="FRAME_VALID" Dir="IN"/>
+		<Port Id="SPI_EN" Dir="OUT"/>
+		<Port Id="SPI_CLK" Dir="OUT"/>
+		<Port Id="SPI_DAT" Dir="OUT"/>
+		<Port Id="LUPA_CLK" Dir="OUT"/>
+		<Port Id="LUPA_RST" Dir="OUT"/>
+		<Port Id="INT_TIME1" Dir="INOUT"/>
+		<Port Id="INT_TIME2" Dir="INOUT"/>
+		<Port Id="INT_TIME3" Dir="INOUT"/>
+		<Port Id="DRAM_CLK" Dir="OUT"/>
+		<Port Id="CS_N" Dir="OUT"/>
+		<Port Id="CKE" Dir="OUT"/>
+		<Port Id="RAS_N" Dir="OUT"/>
+		<Port Id="CAS_N" Dir="OUT"/>
+		<Port Id="WE_N" Dir="OUT"/>
+		<Port Id="UDQM" Dir="OUT"/>
+		<Port Id="LDQM" Dir="OUT"/>
+		<Port Id="TMDS_CLOCK_P" Dir="OUT"/>
+		<Port Id="TMDS_CLOCK_N" Dir="OUT"/>
+		<DiffPair Pos="TMDS_POSITIVE[2]" Neg="TMDS_NEGTIVE[2]"/>
+		<DiffPair Pos="TMDS_POSITIVE[1]" Neg="TMDS_NEGTIVE[1]"/>
+		<DiffPair Pos="TMDS_POSITIVE[0]" Neg="TMDS_NEGTIVE[0]"/>
+		<DiffPair Pos="TMDS_CLOCK_P" Neg="TMDS_CLOCK_N"/>
+	</Ifc>
+</Interface>
+

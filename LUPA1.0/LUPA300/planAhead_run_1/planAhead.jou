@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# PlanAhead v13.3 (64-bit)
+# Build 147507 by hdbuild on Tue Oct  4 19:13:50 MDT 2011
+# Start of session at: Tue Aug 16 17:09:50 2016
+# Process ID: 3320
+# Log file: C:/Users/yingyu/Desktop/LUPA_ISE/LUPA1.0/LUPA300/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/yingyu/Desktop/LUPA_ISE/LUPA1.0/LUPA300/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/yingyu/Desktop/LUPA_ISE/LUPA1.0/LUPA300/pa.fromNetlist.tcl
+set_property IOSTANDARD LVCMOS33 [get_ports [list INT_TIME1]]
+save_design
+exit
+stop_gui

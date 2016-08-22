@@ -1,0 +1,2 @@
+verilog work ../../subpll.v
+verilog work ../example_design/subpll_exdes.v
